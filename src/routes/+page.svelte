@@ -106,7 +106,7 @@
                         score: {score}
                     </span>
                     <span>
-                        deaths :{deaths}
+                        deaths: {deaths}
                     </span>
                 </div>
             {/each}
