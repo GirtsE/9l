@@ -10,9 +10,6 @@
   
     const fetchData = async () => {
       try {
-        console.log(playerRankings)
-        console.log(teammatesData)
-        console.log(teamRankings)
         const responseTeam = await fetch('https://nine-lives.vercel.app/api/team');
         const resultTeam = await responseTeam.json();
         const responsePlayer = await fetch('https://nine-lives.vercel.app/api/player');
@@ -94,7 +91,7 @@
   <main>    
     {#if teamData}
       <div class="scoreboard-wrapper">
-        <div class="title">{teamName}({teamRankings[teamName]})</div>
+        <div class="title">{teamName} ({teamRankings[teamName]})</div>
         <div class="team-data">
             <div>Score: {teamData[teamName].score}</div>
             <div>Lives: {teamData[teamName].lives}</div>
